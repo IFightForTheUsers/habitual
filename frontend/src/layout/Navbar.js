@@ -20,10 +20,6 @@ export default function Navbar() {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-
-          <Link className="btn btn-outline-light" to="/addhabit">
-            Add Habit
-          </Link>
         </div>
       </nav>
     </div>
