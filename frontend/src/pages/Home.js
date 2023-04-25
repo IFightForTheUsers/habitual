@@ -27,10 +27,10 @@ export default function Home() {
         <table className="table border shadow">
           <thead>
             <tr>
-              <th scope="col" className="col-1">
+              {/* <th scope="col" className="col-1">
                 #
-              </th>
-              <th scope="col" className="col-3">
+              </th> */}
+              <th scope="col" className="col-5">
                 Name
               </th>
               <th scope="col" className="col-.5">
@@ -54,7 +54,7 @@ export default function Home() {
               <th scope="col" className="col-.5">
                 Sunday
               </th>
-              <th scope="col" className="col-3">
+              <th scope="col" className="col-2">
                 Actions
               </th>
             </tr>
@@ -62,7 +62,6 @@ export default function Home() {
           <tbody>
             {habits.map((habit) => (
               <tr key={habit.id}>
-                <th scope="row">{habit.id}</th>
                 <td>{habit.name}</td>
                 <td>
                   <input type="checkbox" />
@@ -93,12 +92,12 @@ export default function Home() {
                 <td>{habit.saturday}</td>
                 <td>{habit.sunday}</td> */}
                 <td>
-                  <Link
+                  {/* <Link
                     className="btn btn-primary mx-1"
                     to={`/viewhabit/${habit.id}`}
                   >
                     View
-                  </Link>
+                  </Link> */}
                   <Link
                     className="btn btn-outline-primary mx-1"
                     to={`/edithabit/${habit.id}`}
@@ -117,6 +116,9 @@ export default function Home() {
           </tbody>
         </table>
       </div>
+      <Link className="btn btn-outline-primary my-2" to="/addhabit">
+        Add New Habit
+      </Link>
     </div>
   );
 }
